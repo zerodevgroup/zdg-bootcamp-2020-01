@@ -1,0 +1,40 @@
+digraph {
+  rankdir=TB;
+  {
+    MovieAppWeb [shape=box, style="rounded", color="#376092", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/laptop.png"/></td>
+          <td>Movie App Web</td>
+        </tr>
+      </table>
+    >]
+    MovieService [shape=box, style="rounded", color="#8d55d0", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/handshake-o.png"/></td>
+          <td>Movie Service</td>
+        </tr>
+      </table>
+    >]
+    OmdbApi [shape=box, style="rounded", color="#ac080f", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/microchip.png"/></td>
+          <td>OMDB API</td>
+        </tr>
+      </table>
+    >]
+    Mongo [shape=box, style="rounded", color="#ac080f", fontname="helvetica", label=<
+      <table border="0">
+        <tr>
+          <td><img src="images/48/database.png"/></td>
+          <td>Mongo DB</td>
+        </tr>
+      </table>
+    >]
+    MovieAppWeb -> MovieService [dir=both, color="#8d55d0", fontname="helvetica", label=<<table border="0" ><tr><td><font color="gray"> </font></td></tr></table>>]
+    MovieService -> OmdbApi [dir=both, color="#ac080f", fontname="helvetica", label=<<table border="0" ><tr><td><font color="gray"> </font></td></tr></table>>]
+    MovieService -> Mongo [dir=both, color="#ac080f", fontname="helvetica", label=<<table border="0" ><tr><td><font color="gray"> </font></td></tr></table>>]
+  }
+}
